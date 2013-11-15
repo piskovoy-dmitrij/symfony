@@ -1,0 +1,3 @@
+geek_hub_demo_homepage:
+    pattern:  /main
+    defaults: { _controller: GeekHubDemoBundle:Default:index }

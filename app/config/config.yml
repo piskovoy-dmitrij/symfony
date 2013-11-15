@@ -39,6 +39,18 @@ assetic:
         #yui_css:
         #    jar: %kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar
 
+    assets:
+        bootstrap_css:
+            inputs:
+                - %kernel.root_dir%/../vendor/twbs/bootstrap/dist/css/bootstrap.css
+            output: css/bootstrap.css
+        bootstrap_min_css:
+            inputs:
+                - %kernel.root_dir%/../vendor/twbs/bootstrap/dist/css/bootstrap.min.css
+            filters:
+                - cssrewrite
+            output: css/bootstrap.min.css
+
 # Doctrine Configuration
 doctrine:
     dbal:

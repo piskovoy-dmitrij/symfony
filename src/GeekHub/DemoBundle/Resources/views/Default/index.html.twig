@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+    {% for comment in comments %}
+        {{ include('GeekHubDemoBundle:Partials:_comment.html.twig', {'comment': comment}) }}
+    {% endfor %}
+
+
+
+{% endblock content %}

@@ -1,0 +1,4 @@
+geek_hub_demo:
+    resource: "@GeekHubDemoBundle/Resources/config/routing.yml"
+    prefix:   /
+
