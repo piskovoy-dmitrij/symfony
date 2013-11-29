@@ -1,3 +1,7 @@
 geek_hub_demo_homepage:
     pattern:  /main
     defaults: { _controller: GeekHubDemoBundle:Default:index }
+
+geek_hub_demo_contact:
+    pattern:  /contact
+    defaults: { _controller: GeekHubDemoBundle:Contact:index }

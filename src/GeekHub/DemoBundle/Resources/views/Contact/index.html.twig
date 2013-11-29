@@ -1,0 +1,28 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+    <h2>Contact form</h2>
+
+    {% for key, message in app.session.flashbag.get('notice') %}
+        <div class="{{ key }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    <form action="{{ path('geek_hub_demo_contact') }}" {{ form_enctype(form) }} method="POST" novalidate="">
+
+        {{ form_widget(form) }}
+
+        <div>
+            <input type="submit" class="settings-submit" value="Send" />
+        </div>
+    </form>
+
+
+
+
+{% endblock content %}
+
+
+

@@ -2,6 +2,12 @@
 
 {% block content %}
 
+    {% for key, message in app.session.flashbag.get('notice') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+
     {% for comment in comments %}
         {{ include('GeekHubDemoBundle:Partials:_comment.html.twig', {'comment': comment}) }}
     {% endfor %}
