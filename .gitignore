@@ -1,3 +1,6 @@
+#all backup files
+*~
+
 #PhpStorm
 .idea
 

@@ -1,0 +1,25 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Main blog page</h2>
+
+            {% for article in articles %}
+                {{ include('GeekHubBlogBundle:Partials:_article.html.twig', {'article': article}) }}
+            {% endfor %}
+        </div>
+
+        <div class="col-md-4">
+            <h2>Last Articles</h2>
+
+            <h2>Most viewed articles</h2>
+
+            <h2>Last guestbook posts</h2>
+
+        </div>
+    </div>
+
+{% endblock content %}

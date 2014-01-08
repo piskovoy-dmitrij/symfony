@@ -1,0 +1,7 @@
+geek_hub_blog_homepage:
+    pattern:  /
+    defaults: { _controller: GeekHubBlogBundle:Article:index }
+
+geek_hub_blog_guestbook:
+    pattern:  /guestbook
+    defaults: { _controller: GeekHubBlogBundle:GuestBook:index }

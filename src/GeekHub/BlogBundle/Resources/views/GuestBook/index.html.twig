@@ -1,0 +1,49 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+    {% for key, message in app.session.flashbag.get('notice') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    <h2>Guestbook</h2>
+
+    <hr/>
+
+    <div>
+        {{ form_errors(form) }}
+    </div>
+
+    <form action="{{ path('geek_hub_blog_guestbook') }}" {{ form_enctype(form) }} method="POST" novalidate="">
+        <ul>
+            <li class="col-md-4">
+                <ul>
+                    <li>
+                        {{ form_widget(form.name, { 'attr': {'placeholder' : 'Enter name' } }) }}
+                    </li>
+                    <li>
+                        {{ form_widget(form.email, { 'attr': {'placeholder' : 'Enter email' } }) }}
+                    </li>
+                </ul>
+            </li>
+            <li class="col-md-8">
+                {{ form_widget(form.text, { 'attr': {'placeholder' : 'Text' } }) }}
+            </li>
+        </ul>
+
+        <div>
+            <input type="submit" class="settings-submit" value="Send" />
+        </div>
+    </form>
+
+    <hr/>
+
+    {% for comment in comments %}
+        {{ include('GeekHubBlogBundle:Partials:_comment.html.twig', {'comment': comment}) }}
+    {% endfor %}
+
+
+
+{% endblock content %}

@@ -1,4 +1,11 @@
+geek_hub_blog:
+    resource: "@GeekHubBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+
 geek_hub_demo:
     resource: "@GeekHubDemoBundle/Resources/config/routing.yml"
     prefix:   /
 
+_imagine:
+    resource: .
+    type:     imagine
